@@ -13,8 +13,9 @@ outputs = { self, nixpkgs, nixos-generators, flake-utils, ... }:
 		let pkgs = nixpkgs.legacyPackages.${system};
 		in {
 			packages.quecto = nixos-generators.nixosGenerate {
+				customFormats = { "universal-iso" = { imports = [ ./universal-iso.nix ]; }; };
 				system = "i686-linux";
-				format = "iso";
+				format = "universal-iso";
 				modules = [{
 					system.stateVersion = "unstable";
 					users.users.root.password = "nixos";

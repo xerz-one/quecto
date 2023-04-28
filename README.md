@@ -10,4 +10,4 @@ A Linux distribution aimed at being as tiny as possible.
     - Might end up adding something else, a drawing app or something
 - Optimized as much as reasonable
     - Targeting Pentium III for minimum system requirements
-    - Should be able to fit within an 140MB MD Data
+    - Should be able to fit within a 140MB MD Data
