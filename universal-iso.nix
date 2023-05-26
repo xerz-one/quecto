@@ -2,6 +2,7 @@
 {
 	imports = [
 		"${toString modulesPath}/installer/cd-dvd/iso-image.nix"
+		"${toString modulesPath}/profiles/all-hardware.nix"
 	];
 
 	# SquashFS Zstandard compression
@@ -11,7 +12,7 @@
 	isoImage.makeEfiBootable = true;
 
 	# BIOS booting (for 23.05 or newer)
-	# isoImage.makeBiosBootable = true;
+	isoImage.makeBiosBootable = true;
 
 	# USB booting
 	isoImage.makeUsbBootable = true;
